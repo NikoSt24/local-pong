@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.24)
+project(LocalPong VERSION 0.1.0 LANGUAGES CXX)
+find_package(SFML 3 REQUIRED CONFIG COMPONENTS Graphics Window System)
+add_executable(pong main.cpp)
+target_compile_features(pong PRIVATE cxx_std_17)
+target_link_libraries(pong PRIVATE SFML::Graphics SFML::Window SFML::System)
